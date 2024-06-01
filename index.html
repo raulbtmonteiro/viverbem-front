@@ -56,7 +56,9 @@
           // Exibição de mensagem de sucesso para o usuário
           alert("Login realizado com sucesso!");
           const { token } = data;
+          const { userId } = data;
           document.cookie = `token=${token}`;
+          document.cookie = `userId=${userId}`;
           // Redirecionamento para a página de exibição de dados
           window.location.href = "homepage3.html";
         })
