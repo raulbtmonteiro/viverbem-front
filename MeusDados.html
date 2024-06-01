@@ -78,7 +78,7 @@
               continue;
             if (key == "address") {
               for (const [key2, value2] of Object.entries(value)) {
-                if (key == "id") continue;
+                if (key2 == "id") continue;
                 const item = document.createElement("div");
                 item.classList.add("dados-item");
                 item.innerHTML = `<span>${key2}:</span> ${value2}`;
