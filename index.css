@@ -1,0 +1,48 @@
+ /* Estilos para o corpo da página */
+ body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right, blue, rgb(0, 255, 242));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  /* Estilos para o contêiner do formulário */
+  .container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  /* Estilos para campos de entrada de texto e senha */
+  input[type="text"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #b8c6d4;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  /* Estilos para o botão de login */
+  button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: #3f90ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  /* Estilos para o botão de login quando o mouse está sobre ele */
+  button:hover {
+    background-color: #346db7;
+  }
+  /* Adiciona margem entre os botões */
+  .btn-cadastro {
+    margin-top: 10px;
+  }

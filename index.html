@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viver Bem</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <!-- Formulário de login -->
+        <form id="login">
+            <!-- Campo de entrada para o nome de usuário -->
+            <label for="username">Login:</label>
+            <input type="text" id="username" name="username">
+            <!-- Campo de entrada para a senha -->
+            <label for="senha">Senha:</label>
+            <input type="password" id="password" name="password">
+            <!-- Botão de login -->
+            <button type="button" onclick="login()">Entrar</button>
+        </form>
+        <!-- Botão de cadastro -->
+        <a href="cadastro teste.html"><button class="btn-cadastro" type="button">Cadastre-se</button></a>
+    </div>
+</body>
+
+<script>
+  function login() {
+    // Obtenha os valores dos campos de entrada
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Aqui você pode realizar validações dos dados, como verificar se os campos estão vazios
+    // Exemplo de como você pode enviar os dados para o backend usando fetch API
+  }
+
+</script>
+
+</html>
+
+<!--Ainda é necessário criar o código em JavaScript para o botão do login e senha-->

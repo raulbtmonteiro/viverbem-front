@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, blue, rgb(0, 255, 242));
+    color: #333;
+}
+header {
+    background-color: #007bff00;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.menu2, nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.notice {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.reminder {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.quick-links {
+    text-align: center;
+}
+.quick-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.quick-links a:hover {
+    background-color: #0056b3;
+}
+
+/* Adicionando estilos para o menu sandwich */
+.menu-sandwich {
+    display: none; /* Esconder o menu sandwich por padrão */
+    cursor: pointer;
+    text-align: center;
+}
+ul {
+    list-style-type: none 
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none; /* Esconder o menu normal em dispositivos móveis */
+    }
+
+    .menu-sandwich {
+        display: block; /* Exibir o menu sandwich em dispositivos móveis */
+    }
+
+    /* Estilos adicionais para o menu sandwich */
+    .menu-sandwich nav {
+        display: none;
+    }
+
+    .menu-sandwich.open nav {
+        display: block;
+    }
+}
