@@ -65,6 +65,26 @@
 
         if (dadosCliente) {
           for (const [key, value] of Object.entries(dadosCliente)) {
+            if (
+              [
+                "credentialsNonExpired",
+                "accountNonExpired",
+                "accountNonLocked",
+                "enabled",
+                "authorities",
+                "id",
+              ].includes(key)
+            )
+              continue;
+            if (key == "address") {
+              for (const [key2, value2] of Object.entries(value)) {
+                const item = document.createElement("div");
+                item.classList.add("dados-item");
+                item.innerHTML = `<span>${key2}:</span> ${value2}`;
+                container.appendChild(item);
+              }
+              continue;
+            }
             const item = document.createElement("div");
             item.classList.add("dados-item");
             item.innerHTML = `<span>${key}:</span> ${value}`;
