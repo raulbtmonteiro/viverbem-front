@@ -14,9 +14,30 @@
 
     <script>
       // Função para obter os dados do cliente do localStorage
+      function getCookie(name) {
+        // Constrói a string de busca para o cookie
+        const nameEQ = name + "=";
+        // Divide o document.cookie em um array de cookies
+        const cookies = document.cookie.split(";");
+        // Itera sobre os cookies para encontrar o desejado
+        for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i];
+          // Remove espaços em branco no início do cookie
+          while (cookie.charAt(0) == " ") {
+            cookie = cookie.substring(1, cookie.length);
+          }
+          // Verifica se o cookie atual é o que estamos procurando
+          if (cookie.indexOf(nameEQ) == 0) {
+            // Retorna o valor do cookie
+            return cookie.substring(nameEQ.length, cookie.length);
+          }
+        }
+        // Retorna null se o cookie não for encontrado
+        return null;
+      }
       async function obterDadosCliente() {
-        const token = document.cookie.split("=")[1];
-        const userId = document.cookie.split("=")[2];
+        const token = getCookie("token");
+        const userId = getCookie("userId");
 
         return fetch(`https://viverbem.onrender.com/users/${userId}`, {
           method: "GET",
