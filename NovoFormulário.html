@@ -326,6 +326,7 @@
 
         // Formatação dos dados em um objeto JSON
         var dadosClienteAtualizados = {
+          id: userId,
           firstname,
           lastname,
           dateofbirth,
@@ -375,7 +376,6 @@
         var form = document.getElementById("formulario-alteracao");
         form.style.display = "block";
         //document.getElementById("btn-alterar-dados").style.display = "none";
-        form.onsubmit = atualizarDadosCliente;
         form.addEventListener("submit", atualizarDadosCliente);
       }
 
