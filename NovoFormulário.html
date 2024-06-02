@@ -276,8 +276,8 @@
       }
 
       // Função para preencher o formulário com os dados do cliente
-      function preencherFormulario() {
-        const dadosCliente = obterDadosCliente();
+      async function preencherFormulario() {
+        const dadosCliente = await obterDadosCliente();
 
         if (dadosCliente) {
           document.getElementById("nome").value = dadosCliente.firstname;
