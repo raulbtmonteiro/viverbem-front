@@ -127,7 +127,7 @@
       Alterar Dados
     </button>
 
-    <form id="formulario-alteracao">
+    <form id="formulario-alteracao" onsubmit="atualizarDadosCliente()">
       <label for="nome">Nome</label>
       <input type="text" id="nome" required placeholder="Nome" />
 
@@ -375,6 +375,8 @@
         var form = document.getElementById("formulario-alteracao");
         form.style.display = "block";
         document.getElementById("btn-alterar-dados").style.display = "none";
+        form.onsubmit = atualizarDadosCliente;
+        form.addEventListener("submit", atualizarDadosCliente);
       }
 
       // Chama a função para exibir os dados do cliente ao carregar a página
