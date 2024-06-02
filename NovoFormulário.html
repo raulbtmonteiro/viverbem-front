@@ -303,6 +303,8 @@
       // Função para enviar os dados atualizados para o backend
       async function atualizarDadosCliente(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
+        const token = getCookie("token");
+        const userId = getCookie("userId");
 
         // Captura dos valores dos campos do formulário
         var firstname = document.getElementById("nome").value;
@@ -342,11 +344,11 @@
         };
 
         // Envio da requisição HTTP PUT para o backend
-        await fetch("https://viverbem.onrender.com/users", {
+        await fetch(`https://viverbem.onrender.com/users/${userId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer " + getCookie("token"),
+            Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify(dadosClienteAtualizados), // dadosClienteAtualizados é o objeto JSON com os dados do formulário
         })
