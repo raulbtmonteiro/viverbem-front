@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locais para Exercício</title>
+    <link rel="stylesheet" href="Locais.css">
+    <style>
+        /* Estilização do botão e do formulário */
+        #toggle-form-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #toggle-form-btn:hover {
+            background-color: #00aaff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        #form-section {
+            display: none; /* Oculto inicialmente */
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        #form-section label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        #form-section input,
+        #form-section select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #form-section button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #form-section button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Locais para Exercício</h1>
+
+        <!-- Botão estilizado -->
+        <button id="toggle-form-btn">+ Onde vai se exercitar? </button>
+
+        <!-- Formulário para incluir informações -->
+        <div id="form-section">
+            <h2>Adicionar Informação</h2>
+            <form id="formulario-info">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" required placeholder="Título da informação">
+
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" required placeholder="Descrição da informação">
+
+                <label for="dataHora">Data e Hora</label>
+                <input type="datetime-local" id="dataHora" required>
+
+                <label for="proprietario">Proprietário</label>
+                <input type="text" id="proprietario" required placeholder="Nome do responsável">
+
+                <label for="local">Local para se Exercitar</label>
+                <select id="local" required>
+                    <option value="" disabled selected>Selecione um local</option>
+                    <option value="Zuzão Vila São José">Zuzão Vila São José</option>
+                    <option value="FESC Vila Nery">FESC Vila Nery</option>
+                    <option value="Ginásio Redenção">Ginásio Redenção</option>
+                    <option value="CEU São Carlos 8">CEU São Carlos 8</option>
+                    <option value="Igreja Sto. Antônio">Igreja Sto. Antônio</option>
+                    <option value="IESA Redenção">IESA Redenção</option>
+                    <option value="Ginásio do Santa Felícia">Ginásio do Santa Felícia</option>
+                    <option value="Campo do Luisão">Campo do Luisão</option>
+                    <option value="Campo do Luisão (PISCINA)">Campo do Luisão (PISCINA)</option>
+                </select>
+
+                <button type="submit">Salvar Informação</button>
+            </form>
+        </div>
+
+        <!-- Locais para exercício -->
+        
+        <div class="location">
+            <h2>Zuzão Vila São José</h2>
+            <p><strong>Endereço:</strong> Av. Araraquara, 422 - Vila Brasilia, São Carlos - SP, 13566-770</p>
+            <p><strong>Horários:</strong></p>
+            <p>Segunda-feira das 7h às 8h30</p>
+            <p>Quarta-feira das 7h às 8h30</p>
+            <p>Sexta-feira das 7h às 8h30</p>
+            <p><strong>Professor(a):</strong> Elis Regina Sanches</p>
+            <p><a href="https://www.google.com/maps/place/Av.+Araraquara,+422+-+Vila+Brasilia,+S%C3%A3o+Carlos+-+SP,+13566-770/@-22.0005348,-47.8795186,17z/data=!3m1!4b1!4m6!3m5!1s0x94b8712b1c0c8cd1:0xf36173048e25a3f8!8m2!3d-22.0005348!4d-47.8795186!16s%2Fg%2F11f_j8xy_1?hl=pt-BR&entry=ttu" target="_blank">Ver no Google Maps</a></p>
+        </div>
+
+        <div class="location">
+            <h2>FESC Vila Nery</h2>
+            <p><strong>Endereço:</strong> R. São Sebastião, 2828 - Vila Nery, São Carlos - SP, 13561-207</p>
+            <p><strong>Horários:</strong></p>
+            <p>Terça-feira das 6h50 às 8h20</p>
+            <p>Quinta-feira das 6h50 às 8h20</p>
+            <p><strong>Professor(a):</strong> Elis Regina Sanches</p>
+            <p><a href="https://www.google.com/maps/place/R.+S%C3%A3o+Sebasti%C3%A3o,+2828+-+Vila+Nery,+S%C3%A3o+Carlos+-+SP,+13561-207/data=!4m2!3m1!1s0x94b87727fa1b2e83:0x1c05934c67e8a8a0?sa=X&ved=1t:242&hl=pt-BR&ictx=111" target="_blank">Ver no Google Maps</a></p>
+        </div>
+
+        <div class="location">
+            <h2>Ginásio Redenção</h2>
+            <p><strong>Endereço:</strong> R. Francisco Schiavone, 870 - Jardim Beatriz, São Carlos - SP, 13575-070</p>
+            <p><strong>Horários:</strong></p>
+            <p>Segunda-feira das 7h50 às 9h30</p>
+            <p>Quarta-feira das 7h50 às 9h30</p>
+            <p>Sexta-feira das 7h50 às 9h30</p>
+            <p><strong>Professor(a):</strong> Robson Datto</p>
+            <p><a href="https://www.google.com/maps/place/R.+Francisco+Schiavone,+870+-+Jardim+Beatriz,+S%C3%A3o+Carlos+-+SP,+13575-070/@-22.0332636,-47.9084502,17z/data=!3m1!4b1!4m6!3m5!1s0x94b877690c0bc7a5:0x4595c13c5653fb51!8m2!3d-22.0332636!4d-47.9084502!16s%2Fg%2F11h15dnxn9?hl=pt-BR&entry=ttu" target="_blank">Ver no Google Maps</a></p>
+        </div>
+
+        <div class="location">
+            <h2>CEU São Carlos 8</h2>
+            <p><strong>Endereço:</strong> R. Luiz Luchesi Filho, 125 - Conjunto Habitacional Dom Constantino, Amstalden - SP, 13568-838</p>
+            <p><strong>Horários:</strong></p>
+            <p>Terça-feira das 8h30 às 10h e 14h30 às 18h30</p>
+            <p>Quinta-feira das 8h30 às 10h e 14h30 às 18h30</p>
+            <p><strong>Professor(a):</strong> Robson Datto</p>
+            <p><a href="https://www.google.com/search?sca_esv=986cfd32cb66a37f&bih=730&biw=1536&hl=pt-BR&tbs=lf:1,lf_ui:1&tbm=lcl&sxsrf=ADLYWILOc5FfsCqd3aIIDK-IrqYFTu1VWA:1717126877782&q=Endere%C3%A7o+-+R.+Luiz+Luchesi+Filho,+125+-+Conjunto+Habitacional+Dom+Constantino,+Amstalden+-+SP,+13568-838&rflfq=1&num=10&ved=2ahUKEwiTldaM_LaGAxUvr5UCHaC5D34QtgN6BAgTEAI" target="_blank">Ver no Google Maps</a></p>
+        </div>
+
+        <div class="location">
+            <h2>Igreja Sto. Antônio</h2>
+            <p><strong>Endereço:</strong> Praça Padre Roque Pinto de Barros, s/n - Bela Vista, São Carlos - SP, 13574-040</p>
+            <p><strong>Horários:</strong></p>
+            <p>Quarta-feira das 14h às 16h30</p>
+            <p>Sexta-feira das 14h às 16h30</p>
+            <p><strong>Professor(a):</strong> Robson Datto</p>
+            <p><a href="https://www.google.com/search?q=Endere%C3%A7o+-+Pra%C3%A7a+Padre+Roque+Pinto+de+Barros%2C+s%2Fn+-+Bela+Vista%2C+S%C3%A3o+Carlos+-+SP%2C+13574-040%0D%0A&sca_esv=986cfd32cb66a37f&bih=730&biw=1536&hl=pt-BR&tbm=lcl&sxsrf=ADLYWILt-5dRBlsBF8Z6fpqRlxmYN_DyTw%3A1717126881643&ei=4UZZZpX6JrnP1sQP8ImIkA8&udm=&ved=0ahUKEwjV7sGO_LaGAxW5p5UCHfAEAvIQ4dUDCAk&uact=5&oq=Endere%C3%A7o+-+Pra%C3%A7a+Padre+Roque+Pinto+de+Barros%2C+s%2Fn+-+Bela+Vista%2C+S%C3%A3o+Carlos+-+SP%2C+13574-040%0D%0A&gs_lp=EgZtb3NwaXKqAggpEBAeGK8BUI8FUK4FUKQGUKgGUKgEKgFCAEBQxwKwA8wQ8xgB4gMEGAAgQYgGAQ&sclient=gws-wiz-serp" target="_blank">Ver no Google Maps</a></p>
+        </div>
+
+        <div class="location">
+            <h2>IESA Redenção</h2>
+            <p><strong>Endereço:</strong> R. Germano Fehr Júnior, 340 - Jardim Beatriz, São Carlos - SP, 13575-100</p>
+            <p><strong>Horários:</strong></p>
+            <p>Terça-feira das 14h às 16h30</p>
+            <p>Quinta-feira das 14h às 16h30</p>
+            <p><strong>Professor(a):</strong> Maria Alice Beraldo</p>
+            <p><a href="https://www.google.com/maps/place/R.+Germano+Fehr+J%C3%BAnior,+340+-+Jardim+Beatriz,+S%C3%A3o+Carlos+-+SP,+13575-100/@-22.0333661,-47.9053081,17z/data=!3m1!4b1!4m6!3m5!1s0x94b877696825a619:0x235253f900bd34b8!8m2!3d-22.0333661!4d-47.9053081!16s%2Fg%2F11h15dqc_w?hl=pt-BR&entry=ttu" target="_blank">Ver no Google Maps</a></p>
+        </div>
+
+        <div class="location">
+            <h2>Ginásio do Santa Felícia</h2>
+            <p><strong>Endereço:</strong> R. Alberto Lanzoni, 180 - Parque Santa Felicia Jardim, São Carlos - SP, 13562-390</p>
+            <p><strong>Horários:</strong></p>
+            <p>Terça-feira das 7h às 8h</p>
+            <p>Quinta-feira das 7h às 8h</p>
+            <p><strong>Professor(a):</strong> Jayme Rodrigues da Silva Filho</p>
+            <p><a href="https://www.google.com/search?q=Endere%C3%A7o+-+R.+Alberto+Lanzoni%2C+180+-+Parque+Santa+Felicia+Jardim%2C+S%C3%A3o+Carlos+-+SP%2C+13562-390&sca_esv=986cfd32cb66a37f&bih=730&biw=1536&hl=pt-BR&sxsrf=ADLYWIJRdwfGjqvnw3GX8AfI1KPiz_dUyw%3A1717126999440&ei=V0dZZq-6Gsjn1sQPmOe4qAM&udm=&ved=0ahUKEwjvwdfG_LaGAxXIs5UCHZgzDjUQ4dUDCBA&oq=Endere%C3%A7o+-+R.+Alberto+Lanzoni%2C+180+-+Parque+Santa+Felicia+Jardim%2C+S%C3%A3o+Carlos+-+SP%2C+13562-390&gs_lp=Egxnd3Mtd2l6LXNlcnAiXkVuZGVyZcOnbyAtIFIuIEFsYmVydG8gTGFuem9uaSwgMTgwIC0gUGFycXVlIFNhbnRhIEZlbGljaWEgSmFyZGltLCBTw6NvIENhcmxvcyAtIFNQLCAxMzU2Mi0zOTBIAFAAWABwAHgAkAEAmAEAoAEAqgEAuAEMyAEAmAIAoAIAmAMAkgcAoAcA&sclient=gws-wiz-serp&lqi=Cl5FbmRlcmXDp28gLSBSLiBBbGJlcnRvIExhbnpvbmksIDE4MCAtIFBhcnF1ZSBTYW50YSBGZWxpY2lhIEphcmRpbSwgU8OjbyBDYXJsb3MgLSBTUCwgMTM1NjItMzkwSOvbl9LxrICACFpyEAAYARgCGAMYBBgFGAYYBxgIGAkYChgLGAwYDSJUZW5kZXJlw6dvIHIgYWxiZXJ0byBsYW56b25pIDE4MCBwYXJxdWUgc2FudGEgZmVsaWNpYSBqYXJkaW0gc8OjbyBjYXJsb3Mgc3AgMTM1NjIgMzkwkgERZ3ltbmFzdGljc19jZW50ZXKqAYwBEAEqDSIJZW5kZXJlw6dvKAwyHxABIhsG5cLyljX-R24zMdQH890NFDMWnNf0-ZXPcHEyWBACIlRlbmRlcmXDp28gciBhbGJlcnRvIGxhbnpvbmkgMTgwIHBhcnF1ZSBzYW50YSBmZWxpY2lhIGphcmRpbSBzw6NvIGNhcmxvcyBzcCAxMzU2MiAzOTA#rlimm=8451562884461162564" target="_blank">Ver no Google Maps</a></p>
+        </div>
+        
+        <div class="location">
+            <h2>Campo do Luisão</h2>
+            <p><strong>Endereço:</strong> R. Des. Júlio de Faria, 792-852 - Vila Boa Vista, São Carlos - SP, 13574-250</p>
+            <p><strong>Horários:</strong></p>
+            <p>Terça-feira das 7h às 8h30</p>
+            <p>Quarta-feira 7h às 8h30</p>
+            <p>Quinta-feira das 7h às 8h30</p>
+            <p>Sexta-feira das 7h às 8h30</p>
+            <p><strong>Professor(a):</strong> Ricardo Sinhorelli Colombo</p>
+            <p><a href="https://www.google.com/search?q=Endere%C3%A7o+-+R.+Des.+J%C3%BAlio+de+Faria%2C+792-852+-+Vila+Boa+Vista%2C+S%C3%A3o+Carlos+-+SP%2C+13574-250%0D%0A&sca_esv=986cfd32cb66a37f&bih=730&biw=1536&hl=pt-BR&sxsrf=ADLYWIJRdwfGjqvnw3GX8AfI1KPiz_dUyw%3A1717126999440&ei=V0dZZq-6Gsjn1sQPmOe4qAM&udm=&ved=0ahUKEwjvwdfG_LaGAxXIs5UCHZgzDjUQ4dUDCBA&uact=5&oq=Endere%C3%A7o+-+R.+Des.+J%C3%BAlio+de+Faria%2C+792-852+-+Vila+Boa+Vista%2C+S%C3%A3o+Carlos+-+SP%2C+13574-250%0D%0A&gs_lp=Egxnd3Mtd2l6LXNlcnAaAhgDIltFbmRlcmXDp28gLSBSLiBEZXMuIErDumxpbyBkZSBGYXJpYSwgNzkyLTg1MiAtIFZpbGEgQm9hIFZpc3RhLCBTw6NvIENhcmxvcyAtIFNQLCAxMzU3NC0yNTAKMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMhQQABiABBjjBBi0AhjpBBjqAtgBATITEAAYAxi0AhjqAhiLAxiPAdgBAjITEAAYAxi0AhjqAhiLAxiPAdgBAjITEAAYAxi0AhjqAhiLAxiPAdgBAjITEAAYAxi0AhjqAhiLAxiPAdgBAjIZEC4YAxi0AhikAxioAxjqAhiLAxiPAdgBAkjcEVCYB1iYB3ACeACQAQCYAQCgAQCqAQC4AQPIAQD4AQH4AQKYAgKgAhKoAhCYAwy6BgYIARABGAG6BgYIAhABGAqSBwEyoAcA&sclient=gws-wiz-serp&lqi=ClpFbmRlcmXDp28gLSBSLiBEZXMuIErDumxpbyBkZSBGYXJpYSwgNzkyLTg1MiAtIFZpbGEgQm9hIFZpc3RhLCBTw6NvIENhcmxvcyAtIFNQLCAxMzU3NC0yNTBItuzq75ergIAIWnEQABgBGAIYAxgEGAUYBhgHGAgYCRgKGAsYDBgNGA4YDyJPZW5kZXJlw6dvIHIgZGVzIGrDumxpbyBkZSBmYXJpYSA3OTIgODUyIHZpbGEgYm9hIHZpc3RhIHPDo28gY2FybG9zIHNwIDEzNTc0IDI1MJIBB3N0YWRpdW2qAYcBEAEqDSIJZW5kZXJlw6dvKAwyHxABIhtJ6WQUno7zeU957kpp2ke3Gv2_itfD2gB8eCgyUxACIk9lbmRlcmXDp28gciBkZXMgasO6bGlvIGRlIGZhcmlhIDc5MiA4NTIgdmlsYSBib2EgdmlzdGEgc8OjbyBjYXJsb3Mgc3AgMTM1NzQgMjUw#rlimm=8741110923747822813" target="_blank">Ver no Google Maps</a></p>
+        </div>
+        
+        <div class="location">
+            <h2>Campo do Luisão (PISCINA)</h2>
+            <p><strong>Endereço:</strong> R. Des. Júlio de Faria, 792-852 - Vila Boa Vista, São Carlos - SP, 13574-250</p>
+            <p><strong>Horários:</strong></p>
+            <p>Terça-feira das 10h30 às 12h</p>
+            <p>Quinta-feira das 10h30 às 12h</p>
+            <p><strong>Professor(a):</strong> Ricardo Sinhorelli Colombo</p>
+            <p><a href="https://www.google.com/maps/search/Endere%C3%A7o+-+R.+Des.+J%C3%BAlio+de+Faria,+792-852+-+Vila+Boa+Vista,+S%C3%A3o+Carlos+-+SP,+13574-250+/@-22.0332633,-47.916175,15z/data=!3m1!4b1?hl=pt-BR&entry=ttu" target="_blank">Ver no Google Maps</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Alternar exibição do formulário
+        document.getElementById('toggle-form-btn').addEventListener('click', function () {
+            const formSection = document.getElementById('form-section');
+            formSection.style.display = formSection.style.display === 'none' || formSection.style.display === '' ? 'block' : 'none';
+        });
+
+        // Manipulação do formulário
+        document.getElementById('formulario-info').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Captura os valores dos campos do formulário
+            const titulo = document.getElementById('titulo').value;
+            const descricao = document.getElementById('descricao').value;
+            const dataHora = document.getElementById('dataHora').value;
+            const proprietario = document.getElementById('proprietario').value;
+            const local = document.getElementById('local').value;
+
+            // Exibe um alerta de confirmação
+            alert(`Informação salva com sucesso:\nTítulo: ${titulo}\nDescrição: ${descricao}\nData e Hora: ${dataHora}\nProprietário: ${proprietario}\nLocal: ${local}`);
+
+            // Limpar o formulário
+            document.getElementById('formulario-info').reset();
+            document.getElementById('form-section').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
