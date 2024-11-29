@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dados do Cliente</title>
+    <link rel="stylesheet" href="MeusDados.css" />
+  </head>
+  <body>
+    <h2>Dados do Cliente</h2>
+    <div class="dados-container" id="dadosClienteContainer">
+      <!-- Os dados do cliente serão inseridos aqui -->
+    </div>
+
+    <script>
+      // Função para obter os dados do cliente do localStorage
+      function getCookie(name) {
+        // Constrói a string de busca para o cookie
+        const nameEQ = name + "=";
+        // Divide o document.cookie em um array de cookies
+        const cookies = document.cookie.split(";");
+        // Itera sobre os cookies para encontrar o desejado
+        for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i];
+          // Remove espaços em branco no início do cookie
+          while (cookie.charAt(0) == " ") {
+            cookie = cookie.substring(1, cookie.length);
+          }
+          // Verifica se o cookie atual é o que estamos procurando
+          if (cookie.indexOf(nameEQ) == 0) {
+            // Retorna o valor do cookie
+            return cookie.substring(nameEQ.length, cookie.length);
+          }
+        }
+        // Retorna null se o cookie não for encontrado
+        return null;
+      }
+      async function obterDadosCliente() {
+        const token = getCookie("token");
+        const userId = getCookie("userId");
+
+        return fetch(`https://viverbem.onrender.com/users/${userId}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Erro ao buscar cliente");
+            }
+            return response.json();
+          })
+          .catch((error) => {
+            // Exibição de mensagem de erro para o usuário
+            alert("Erro ao cadastrar cliente: " + error.message);
+          });
+      }
+
+      // Função para exibir os dados do cliente na página
+      async function exibirDadosCliente() {
+        const dadosCliente = await obterDadosCliente();
+        const container = document.getElementById("dadosClienteContainer");
+
+        if (dadosCliente) {
+          for (const [key, value] of Object.entries(dadosCliente)) {
+            if (
+              [
+                "credentialsNonExpired",
+                "accountNonExpired",
+                "accountNonLocked",
+                "enabled",
+                "authorities",
+                "id",
+              ].includes(key)
+            )
+              continue;
+            if (key == "address") {
+              for (const [key2, value2] of Object.entries(value)) {
+                if (key2 == "id") continue;
+                const item = document.createElement("div");
+                item.classList.add("dados-item");
+                item.innerHTML = `<span>${key2}:</span> ${value2}`;
+                container.appendChild(item);
+              }
+              continue;
+            }
+            const item = document.createElement("div");
+            item.classList.add("dados-item");
+            item.innerHTML = `<span>${key}:</span> ${value}`;
+            container.appendChild(item);
+          }
+        } else {
+          container.innerHTML = "<p>Nenhum dado encontrado.</p>";
+        }
+      }
+
+      // Chama a função para exibir os dados do cliente ao carregar a página
+      document.addEventListener("DOMContentLoaded", exibirDadosCliente);
+    </script>
+  </body>
+</html>

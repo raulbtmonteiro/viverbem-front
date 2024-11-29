@@ -1,117 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>condoedge</title>
-    <link rel="stylesheet" href="homepage3.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="homepage3.css">
+</head>
+<body>
     <header>
-      <h1>Viver Bem</h1>
+        <h1>Viver Bem</h1>
     </header>
     <nav class="menu">
-      <a href="#">Home</a>
-      <a href="NovoFormulário.html">Meus dados</a>
-      <a href="Locais.html">Locais</a>
+        <a href="#">Home</a>
+        <a href="NovoFormulário.html">Meus dados</a>
+        <a href="locais2.html">Locais</a>
+        
     </nav>
-
+    
     <!-- Menu sandwich -->
-    <div class="menu-sandwich">
-      &#9776;
-      <nav class="menu2">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="NovoFormulário.html">Meus dados</a></li>
-          <li><a href="Locais.html">Locais</a></li>
-        </ul>
-      </nav>
+    <div class="menu-sandwich">&#9776;
+        <nav class="menu2">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="MeusDados.html">Meus dados</a></li>
+                <li><a href="Locais.html">Locais</a></li>
+                
+            </ul>
+        </nav>
     </div>
 
     <div class="container">
-      <div class="notice">
-        <h2>O Viver Bem é o seu companheiro de saúde</h2>
-        <p>
-          O Viver Bem é um aplicativo revolucionário projetado para ajudar você
-          a alcançar e manter um estilo de vida saudável de maneira fácil e
-          conveniente. Com uma variedade de recursos e ferramentas intuitivas, o
-          Viver Bem se torna o seu companheiro de saúde ideal, onde quer que
-          você esteja.
-        </p>
-      </div>
-      <div class="reminder">
-        <h2>Locais para se exercitar</h2>
-        <div id="exercise-location">
-          "Espaço para incluir locais para se exercitar"
+        <div class="notice">
+            <h2>O Viver Bem é o seu companheiro de saúde</h2>
+            <p>O Viver Bem é um aplicativo revolucionário projetado para ajudar você a alcançar e manter um estilo de vida saudável de maneira fácil e conveniente. Com uma variedade de recursos e ferramentas intuitivas, o Viver Bem se torna o seu companheiro de saúde ideal, onde quer que você esteja.</p>
         </div>
-      </div>
+        <div class="reminder">
+            <h2>Locais para se exercitar</h2>
+            <div id="exercise-location">"Espaço para incluir locais para se exercitar"</div>
+        </div>
     </div>
 
     <!-- Script para mostrar/ocultar o menu ao clicar no menu sandwich -->
     <script>
-      document
-        .querySelector(".menu-sandwich")
-        .addEventListener("click", function () {
-          this.classList.toggle("open");
+        document.querySelector('.menu-sandwich').addEventListener('click', function() {
+            this.classList.toggle('open');
         });
 
-      const locations = [
-        {
-          name: "Ginásio do Santa Felícia",
-          address:
-            "R. Alberto Lanzoni, 180 - Parque Santa Felicia Jardim, São Carlos - SP, 13562-390",
-          hours: ["Terça-feira das 7h às 8h", "Quinta-feira das 7h às 8h"],
-          professor: "Jayme Rodrigues da Silva Filho",
-          link: "https://www.google.com/search?q=Endere%C3%A7o+-+R.+Alberto+Lanzoni%2C+180+-+Parque+Santa+Felicia+Jardim%2C+S%C3%A3o+Carlos+-+SP%2C+13562-390&sca_esv=986cfd32cb66a37f&bih=730&biw=1536&hl=pt-BR&sxsrf=ADLYWIJRdwfGjqvnw3GX8AfI1KPiz_dUyw%3A1717126999440&ei=V0dZZq-6Gsjn1sQPmOe4qAM&udm=&ved=0ahUKEwjvwdfG_LaGAxXIs5UCHZgzDjUQ4dUDCBA&oq=Endere%C3%A7o+-+R.+Alberto+Lanzoni%2C+180+-+Parque+Santa+Felicia+Jardim%2C+S%C3%A3o+Carlos+-+SP%2C+13562-390&gs_lp=Egxnd3Mtd2l6LXNlcnAiXkVuZGVyZcOnbyAtIFIuIEFsYmVydG8gTGFuem9uaSwgMTgwIC0gUGFycXVlIFNhbnRhIEZlbGljaWEgSmFyZGltLCBTw6NvIENhcmxvcyAtIFNQLCAxMzU2Mi0zOTBIAFAAWABwAHgAkAEAmAEAoAEAqgEAuAEMyAEAmAIAoAIAmAMAkgcAoAcA&sclient=gws-wiz-serp&lqi=Cl5FbmRlcmXDp28gLSBSLiBBbGJlcnRvIExhbnpvbmksIDE4MCAtIFBhcnF1ZSBTYW50YSBGZWxpY2lhIEphcmRpbSwgU8OjbyBDYXJsb3MgLSBTUCwgMTM1NjItMzkwSOvbl9LxrICACFpyEAAYARgCGAMYBBgFGAYYBxgIGAkYChgLGAwYDSJUZW5kZXJlw6dvIHIgYWxiZXJ0byBsYW56b25pIDE4MCBwYXJxdWUgc2FudGEgZmVsaWNpYSBqYXJkaW0gc8OjbyBjYXJsb3Mgc3AgMTM1NjIgMzkwkgERZ3ltbmFzdGljc19jZW50ZXKqAYwBEAEqDSIJZW5kZXJlw6dvKAwyHxABIhsG5cLyljX-R24zMdQH890NFDMWnNf0-ZXPcHEyWBACIlRlbmRlcmXDp28gciBhbGJlcnRvIGxhbnpvbmkgMTgwIHBhcnF1ZSBzYW50YSBmZWxpY2lhIGphcmRpbSBzw6NvIGNhcmxvcyBzcCAxMzU2MiAzOTA#rlimm=8451562884461162564",
-        },
-        {
-          name: "Campo do Luisão",
-          address:
-            "R. Des. Júlio de Faria, 792-852 - Vila Boa Vista, São Carlos - SP, 13574-250",
-          hours: [
-            "Terça-feira das 7h às 8h30",
-            "Quarta-feira 7h às 8h30",
-            "Quinta-feira das 7h às 8h30",
-            "Sexta-feira das 7h às 8h30",
-          ],
-          professor: "Ricardo Sinhorelli Colombo",
-          link: "https://www.google.com/search?q=Endere%C3%A7o+-+R.+Des.+J%C3%BAlio+de+Faria%2C+792-852+-+Vila+Boa+Vista%2C+S%C3%A3o+Carlos+-+SP%2C+13574-250%0D%0A&sca_esv=986cfd32cb66a37f&bih=730&biw=1536&hl=pt-BR&sxsrf=ADLYWIJRdwfGjqvnw3GX8AfI1KPiz_dUyw%3A1717126999440&ei=V0dZZq-6Gsjn1sQPmOe4qAM&udm=&ved=0ahUKEwjvwdfG_LaGAxXIs5UCHZgzDjUQ4dUDCBA&uact=5&oq=Endere%C3%A7o+-+R.+Des.+J%C3%BAlio+de+Faria%2C+792-852+-+Vila+Boa+Vista%2C+S%C3%A3o+Carlos+-+SP%2C+13574-250%0D%0A&gs_lp=Egxnd3Mtd2l6LXNlcnAaAhgDIltFbmRlcmXDp28gLSBSLiBEZXMuIErDumxpbyBkZSBGYXJpYSwgNzkyLTg1MiAtIFZpbGEgQm9hIFZpc3RhLCBTw6NvIENhcmxvcyAtIFNQLCAxMzU3NC0yNTAKMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMhQQABiABBjjBBi0AhjpBBjqAtgBATITEAAYAxi0AhjqAhiLAxiPAdgBAjITEAAYAxi0AhjqAhiLAxiPAdgBAjITEAAYAxi0AhjqAhiLAxiPAdgBAjITEAAYAxi0AhjqAhiLAxiPAdgBAjIZEC4YAxi0AhikAxioAxjqAhiLAxiPAdgBAkjcEVCYB1iYB3ACeACQAQCYAQCgAQCqAQC4AQPIAQD4AQH4AQKYAgKgAhKoAhCYAwy6BgYIARABGAG6BgYIAhABGAqSBwEyoAcA&sclient=gws-wiz-serp&lqi=ClpFbmRlcmXDp28gLSBSLiBEZXMuIErDumxpbyBkZSBGYXJpYSwgNzkyLTg1MiAtIFZpbGEgQm9hIFZpc3RhLCBTw6NvIENhcmxvcyAtIFNQLCAxMzU3NC0yNTBItuzq75ergIAIWnEQABgBGAIYAxgEGAUYBhgHGAgYCRgKGAsYDBgNGA4YDyJPZW5kZXJlw6dvIHIgZGVzIGrDumxpbyBkZSBmYXJpYSA3OTIgODUyIHZpbGEgYm9hIHZpc3RhIHPDo28gY2FybG9zIHNwIDEzNTc0IDI1MJIBB3N0YWRpdW2qAYcBEAEqDSIJZW5kZXJlw6dvKAwyHxABIhtJ6WQUno7zeU957kpp2ke3Gv2_itfD2gB8eCgyUxACIk9lbmRlcmXDp28gciBkZXMgasO6bGlvIGRlIGZhcmlhIDc5MiA4NTIgdmlsYSBib2EgdmlzdGEgc8OjbyBjYXJsb3Mgc3AgMTM1NzQgMjUw#rlimm=8741110923747822813",
-        },
-        {
-          name: "Campo do Luisão (PISCINA)",
-          address:
-            "R. Des. Júlio de Faria, 792-852 - Vila Boa Vista, São Carlos - SP, 13574-250",
-          hours: [
-            "Terça-feira das 10h30 às 12h",
-            "Quinta-feira das 10h30 às 12h",
-          ],
-          professor: "Ricardo Sinhorelli Colombo",
-          link: "https://www.google.com/maps/search/Endere%C3%A7o+-+R.+Des.+J%C3%BAlio+de+Faria,+792-852+-+Vila+Boa+Vista,+S%C3%A3o+Carlos+-+SP,+13574-250+/@-22.0332633,-47.916175,15z/data=!3m1!4b1?hl=pt-BR&entry=ttu",
-        },
-      ];
+        const locations = [
+            {
+                name: "Ginásio do Santa Felícia",
+                address: "R. Alberto Lanzoni, 180 - Parque Santa Felicia Jardim, São Carlos - SP, 13562-390",
+                hours: [
+                    "Terça-feira das 7h às 8h",
+                    "Quinta-feira das 7h às 8h"
+                ],
+                professor: "Jayme Rodrigues da Silva Filho",
+                link: "https://www.google.com/search?q=Endere%C3%A7o+-+R.+Alberto+Lanzoni%2C+180+-+Parque+Santa+Felicia+Jardim%2C+S%C3%A3o+Carlos+-+SP%2C+13562-390&sca_esv=986cfd32cb66a37f&bih=730&biw=1536&hl=pt-BR&sxsrf=ADLYWIJRdwfGjqvnw3GX8AfI1KPiz_dUyw%3A1717126999440&ei=V0dZZq-6Gsjn1sQPmOe4qAM&udm=&ved=0ahUKEwjvwdfG_LaGAxXIs5UCHZgzDjUQ4dUDCBA&oq=Endere%C3%A7o+-+R.+Alberto+Lanzoni%2C+180+-+Parque+Santa+Felicia+Jardim%2C+S%C3%A3o+Carlos+-+SP%2C+13562-390&gs_lp=Egxnd3Mtd2l6LXNlcnAiXkVuZGVyZcOnbyAtIFIuIEFsYmVydG8gTGFuem9uaSwgMTgwIC0gUGFycXVlIFNhbnRhIEZlbGljaWEgSmFyZGltLCBTw6NvIENhcmxvcyAtIFNQLCAxMzU2Mi0zOTBIAFAAWABwAHgAkAEAmAEAoAEAqgEAuAEMyAEAmAIAoAIAmAMAkgcAoAcA&sclient=gws-wiz-serp&lqi=Cl5FbmRlcmXDp28gLSBSLiBBbGJlcnRvIExhbnpvbmksIDE4MCAtIFBhcnF1ZSBTYW50YSBGZWxpY2lhIEphcmRpbSwgU8OjbyBDYXJsb3MgLSBTUCwgMTM1NjItMzkwSOvbl9LxrICACFpyEAAYARgCGAMYBBgFGAYYBxgIGAkYChgLGAwYDSJUZW5kZXJlw6dvIHIgYWxiZXJ0byBsYW56b25pIDE4MCBwYXJxdWUgc2FudGEgZmVsaWNpYSBqYXJkaW0gc8OjbyBjYXJsb3Mgc3AgMTM1NjIgMzkwkgERZ3ltbmFzdGljc19jZW50ZXKqAYwBEAEqDSIJZW5kZXJlw6dvKAwyHxABIhsG5cLyljX-R24zMdQH890NFDMWnNf0-ZXPcHEyWBACIlRlbmRlcmXDp28gciBhbGJlcnRvIGxhbnpvbmkgMTgwIHBhcnF1ZSBzYW50YSBmZWxpY2lhIGphcmRpbSBzw6NvIGNhcmxvcyBzcCAxMzU2MiAzOTA#rlimm=8451562884461162564"
+            },
+            {
+                name: "Campo do Luisão",
+                address: "R. Des. Júlio de Faria, 792-852 - Vila Boa Vista, São Carlos - SP, 13574-250",
+                hours: [
+                    "Terça-feira das 7h às 8h30",
+                    "Quarta-feira 7h às 8h30",
+                    "Quinta-feira das 7h às 8h30",
+                    "Sexta-feira das 7h às 8h30"
+                ],
+                professor: "Ricardo Sinhorelli Colombo",
+                link: "https://www.google.com/search?q=Endere%C3%A7o+-+R.+Des.+J%C3%BAlio+de+Faria%2C+792-852+-+Vila+Boa+Vista%2C+S%C3%A3o+Carlos+-+SP%2C+13574-250%0D%0A&sca_esv=986cfd32cb66a37f&bih=730&biw=1536&hl=pt-BR&sxsrf=ADLYWIJRdwfGjqvnw3GX8AfI1KPiz_dUyw%3A1717126999440&ei=V0dZZq-6Gsjn1sQPmOe4qAM&udm=&ved=0ahUKEwjvwdfG_LaGAxXIs5UCHZgzDjUQ4dUDCBA&uact=5&oq=Endere%C3%A7o+-+R.+Des.+J%C3%BAlio+de+Faria%2C+792-852+-+Vila+Boa+Vista%2C+S%C3%A3o+Carlos+-+SP%2C+13574-250%0D%0A&gs_lp=Egxnd3Mtd2l6LXNlcnAaAhgDIltFbmRlcmXDp28gLSBSLiBEZXMuIErDumxpbyBkZSBGYXJpYSwgNzkyLTg1MiAtIFZpbGEgQm9hIFZpc3RhLCBTw6NvIENhcmxvcyAtIFNQLCAxMzU3NC0yNTAKMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMhQQABiABBjjBBi0AhjpBBjqAtgBATITEAAYAxi0AhjqAhiLAxiPAdgBAjITEAAYAxi0AhjqAhiLAxiPAdgBAjITEAAYAxi0AhjqAhiLAxiPAdgBAjITEAAYAxi0AhjqAhiLAxiPAdgBAjIZEC4YAxi0AhikAxioAxjqAhiLAxiPAdgBAkjcEVCYB1iYB3ACeACQAQCYAQCgAQCqAQC4AQPIAQD4AQH4AQKYAgKgAhKoAhCYAwy6BgYIARABGAG6BgYIAhABGAqSBwEyoAcA&sclient=gws-wiz-serp&lqi=ClpFbmRlcmXDp28gLSBSLiBEZXMuIErDumxpbyBkZSBGYXJpYSwgNzkyLTg1MiAtIFZpbGEgQm9hIFZpc3RhLCBTw6NvIENhcmxvcyAtIFNQLCAxMzU3NC0yNTBItuzq75ergIAIWnEQABgBGAIYAxgEGAUYBhgHGAgYCRgKGAsYDBgNGA4YDyJPZW5kZXJlw6dvIHIgZGVzIGrDumxpbyBkZSBmYXJpYSA3OTIgODUyIHZpbGEgYm9hIHZpc3RhIHPDo28gY2FybG9zIHNwIDEzNTc0IDI1MJIBB3N0YWRpdW2qAYcBEAEqDSIJZW5kZXJlw6dvKAwyHxABIhtJ6WQUno7zeU957kpp2ke3Gv2_itfD2gB8eCgyUxACIk9lbmRlcmXDp28gciBkZXMgasO6bGlvIGRlIGZhcmlhIDc5MiA4NTIgdmlsYSBib2EgdmlzdGEgc8OjbyBjYXJsb3Mgc3AgMTM1NzQgMjUw#rlimm=8741110923747822813"
+            },
+            {
+                name: "Campo do Luisão (PISCINA)",
+                address: "R. Des. Júlio de Faria, 792-852 - Vila Boa Vista, São Carlos - SP, 13574-250",
+                hours: [
+                    "Terça-feira das 10h30 às 12h",
+                    "Quinta-feira das 10h30 às 12h"
+                ],
+                professor: "Ricardo Sinhorelli Colombo",
+                link: "https://www.google.com/maps/search/Endere%C3%A7o+-+R.+Des.+J%C3%BAlio+de+Faria,+792-852+-+Vila+Boa+Vista,+S%C3%A3o+Carlos+-+SP,+13574-250+/@-22.0332633,-47.916175,15z/data=!3m1!4b1?hl=pt-BR&entry=ttu"
+            }
+        ];
 
-      function getRandomLocation() {
-        const randomIndex = Math.floor(Math.random() * locations.length);
-        return locations[randomIndex];
-      }
+        function getRandomLocation() {
+            const randomIndex = Math.floor(Math.random() * locations.length);
+            return locations[randomIndex];
+        }
 
-      function displayLocation() {
-        const location = getRandomLocation();
-        const locationDiv = document.getElementById("exercise-location");
-        locationDiv.innerHTML = `
+        function displayLocation() {
+            const location = getRandomLocation();
+            const locationDiv = document.getElementById("exercise-location");
+            locationDiv.innerHTML = `
                 <h3>${location.name}</h3>
                 <p><strong>Endereço:</strong> ${location.address}</p>
                 <p><strong>Horários:</strong></p>
-                ${location.hours.map((hour) => `<p>${hour}</p>`).join("")}
+                ${location.hours.map(hour => `<p>${hour}</p>`).join('')}
                 <p><strong>Professor(a):</strong> ${location.professor}</p>
-                <p><a href="${
-                  location.link
-                }" target="_blank">Ver no Google Maps</a></p>
+                <p><a href="${location.link}" target="_blank">Ver no Google Maps</a></p>
             `;
-      }
+        }
 
-      displayLocation();
-      setInterval(displayLocation, 120000); // Alterar a cada 2 minutos (120000 milissegundos)
+        displayLocation();
+        setInterval(displayLocation, 120000); // Alterar a cada 2 minutos (120000 milissegundos)
     </script>
-  </body>
+</body>
 </html>
